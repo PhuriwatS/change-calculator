@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 import './index.scss'
 
 const Input = (props) => {
-  const { id, className, type, name, placeholder, value, onChange, required, label } = props
+  const { id, className, type, name, placeholder, value, onChange, required, readOnly, label } = props
   return (
     <div className='input-container'>
-      {label && <label for={id} className='input-label'>{label}</label>}
+      {label && <label htmlFor={id} className='input-label'>{label}</label>}
       <input
         id={id}
         className={`input-box ${className}`}
@@ -16,6 +16,7 @@ const Input = (props) => {
         placeholder={placeholder}
         onChange={e => onChange(e)}
         required={required}
+        readOnly={readOnly}
       />
     </div>
   )
@@ -24,12 +25,13 @@ const Input = (props) => {
 Input.defaultProps = {
   id: 'input',
   className: '',
-  type: 'text',
+  type: 'number',
   name: '',
   value: '',
   placeholder: '',
   onChange: () => { },
   required: false,
+  readOnly: false,
   label: '',
 }
 
@@ -38,10 +40,11 @@ Input.propTypes = {
   className: PropTypes.string,
   type: PropTypes.string,
   name: PropTypes.string,
-  value: PropTypes.string,
+  value: PropTypes.any,
   placeholder: PropTypes.string,
   onChange: PropTypes.func,
   required: PropTypes.bool,
+  readOnly: PropTypes.bool,
   label: PropTypes.string,
 }
 
