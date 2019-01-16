@@ -62,18 +62,18 @@ class App extends Component {
           <p>Change calculator</p>
         </div>
         <div className="home-content">
-          <Input label="Amount" name="amount" value={amount} onChange={this.calculateChange} />
+          <Input label="Amount" className="amount" name="amount" value={amount} onChange={this.calculateChange} />
           <p>----- Change -----</p>
-          <Input label="$100 dollar" name="hundredDollar" value={hundredDollar} readOnly />
-          <Input label="$50 dollar" name="fiftyDollar" value={fiftyDollar} readOnly />
-          <Input label="$20 dollar" name="twentyDollar" value={twentyDollar} readOnly />
-          <Input label="$10 dollar" name="tenDollar" value={tenDollar} readOnly />
-          <Input label="$5 dollar" name="fiveDollar" value={fiveDollar} readOnly />
-          <Input label="$1 dollar" name="oneDollar" value={oneDollar} readOnly />
-          <Input label="$0.25 cents (quarter)" name="quarter" value={quarter} readOnly />
-          <Input label="$0.10 cents (dime)" name="dime" value={dime} readOnly />
-          <Input label="$0.05 cents (nickel)" name="nickel" value={nickel} readOnly />
-          <Input label="$0.01 cents (penny)" name="penny" value={penny} readOnly />
+          <Input label="$100 dollar" className="hundredDollar" name="hundredDollar" value={hundredDollar} readOnly />
+          <Input label="$50 dollar" className="fiftyDollar" name="fiftyDollar" value={fiftyDollar} readOnly />
+          <Input label="$20 dollar" className="twentyDollar" name="twentyDollar" value={twentyDollar} readOnly />
+          <Input label="$10 dollar" className="tenDollar" name="tenDollar" value={tenDollar} readOnly />
+          <Input label="$5 dollar" className="fiveDollar" name="fiveDollar" value={fiveDollar} readOnly />
+          <Input label="$1 dollar" className="oneDollar" name="oneDollar" value={oneDollar} readOnly />
+          <Input label="$0.25 cents (quarter)" className="quarter" name="quarter" value={quarter} readOnly />
+          <Input label="$0.10 cents (dime)" className="dime" name="dime" value={dime} readOnly />
+          <Input label="$0.05 cents (nickel)" className="nickel" name="nickel" value={nickel} readOnly />
+          <Input label="$0.01 cents (penny)" className="penny" name="penny" value={penny} readOnly />
         </div>
       </div>
     )
